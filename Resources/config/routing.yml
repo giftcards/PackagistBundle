@@ -1,0 +1,3 @@
+giftcards_packagist:
+    resource: "@GiftCardsPackagistBundle/Controller"
+    type:     annotation
