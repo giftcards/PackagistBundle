@@ -31,7 +31,7 @@ Configure the stash connection
 ```YAML
     giftcards_packagist:
         protocol: ssh
-        domain: stash.wolfe.com
+        domain: stash.domain.com
 ```
         
 ### app/config/routing.yml
