@@ -1,4 +1,11 @@
 PackagistBundle
 ===============
 
-Adds additional functionality to Packagist
+Additional Functionality
+------------------------
+
+1. Atlassian Stash Integration
+2. Global Maintainer Console Command
+
+Installation
+------------
