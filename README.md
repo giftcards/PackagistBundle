@@ -13,10 +13,10 @@ Installation
 ### app/AppKernel.php
 Register the new bundle in your AppKernel file
 
-	new Nelmio\SolariumBundle\NelmioSolariumBundle(),
-    new Nelmio\SecurityBundle\NelmioSecurityBundle(),
-	new GiftCards\PackagistBundle\GiftCardsPackagistBundle(),
-);
+	    new Nelmio\SolariumBundle\NelmioSolariumBundle(),
+        new Nelmio\SecurityBundle\NelmioSecurityBundle(),
+	    new GiftCards\PackagistBundle\GiftCardsPackagistBundle(),
+    );
 
 ### app/config/config.yml
 Configure the stash connection
