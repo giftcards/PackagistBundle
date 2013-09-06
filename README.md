@@ -5,6 +5,7 @@ Additional Functionality
 ------------------------
 
 1. Atlassian Stash Integration
+
     Should be used with this [Stash Plugin](https://marketplace.atlassian.com/plugins/com.atlassian.stash.plugin.stash-web-post-receive-hooks-plugin)    
     Plugin [Documentation](https://confluence.atlassian.com/display/STASH/POST+service+webhook+for+Stash)
 2. Global Maintainer Console Command
@@ -26,7 +27,7 @@ Register the new bundle in your AppKernel file
 Configure the stash connection
 
 ```YAML
-    giftcards_packagist:
+    gift_cards_packagist:
         protocol: ssh
         domain: stash.domain.com
 ```
