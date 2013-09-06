@@ -17,8 +17,8 @@ class GiftCardsPackagistExtension extends Extension
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
-        $container->setParameter('giftcards_packagist.stash.protocol', $config['protocol']);
-        $container->setParameter('giftcards_packagist.stash.domain', $config['domain']);
-        $container->setParameter('giftcards_packagist.stash.port', $config['port']);
+        $container->setParameter('gift_cards_packagist.stash.protocol', $config['protocol']);
+        $container->setParameter('gift_cards_packagist.stash.domain', $config['domain']);
+        $container->setParameter('gift_cards_packagist.stash.port', $config['port']);
     }
 }

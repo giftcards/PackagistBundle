@@ -4,6 +4,7 @@
 	"type" : "symfony-bundle",
 	"authors" : [{
 			"name" : "Michael Schroeder",
+			"email" : "mike.schroeder@giftcards.com",
 			"homepage" : "https://www.giftcards.com"
 		}
 	],
@@ -24,5 +25,8 @@
 			"GiftCards\\PackagistBundle" : ""
 		}
 	},
-	"target-dir" : "GiftCards/PackagistBundle"
+	"target-dir" : "GiftCards/PackagistBundle",
+	"support" : {
+		"issues" : "https://github.com/giftcards/PackagistBundle/issues"
+	}
 }

@@ -26,7 +26,7 @@ class Configuration implements ConfigurationInterface
         );
         
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('giftcards_packagist');
+        $rootNode = $treeBuilder->root('gift_cards_packagist');
 
         $rootNode
             ->children()

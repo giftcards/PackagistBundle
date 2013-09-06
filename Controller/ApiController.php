@@ -28,14 +28,14 @@ class ApiController extends PackagistApiController
         
         $repoUrl = sprintf(
         	$urlFormat,
-            $this->container->getParameter('giftcards_packagist.stash.protocol'),
-            $this->container->getParameter('giftcards_packagist.stash.domain'),
-            (is_null($this->container->getParameter('giftcards_packagist.stash.port')) ? '' : ':' . $this->container->getParameter('giftcards_packagist.stash.port')),
+            $this->container->getParameter('gift_cards_packagist.stash.protocol'),
+            $this->container->getParameter('gift_cards_packagist.stash.domain'),
+            (is_null($this->container->getParameter('gift_cards_packagist.stash.port')) ? '' : ':' . $this->container->getParameter('gift_cards_packagist.stash.port')),
         	strtolower($payload['repository']['project']['key']),
         	strtolower($payload['repository']['slug'])
         );
 
-        $urlRegex = '{^(?:https?://|ssh://git@|git@)?(?P<host>' . preg_quote($this->container->getParameter('giftcards_packagist.stash.domain')) . ')[/:](?P<path>[\w.-]+/[\w.-]+?)(\.git)?/?$}';
+        $urlRegex = '{^(?:https?://|ssh://git@|git@)?(?P<host>' . preg_quote($this->container->getParameter('gift_cards_packagist.stash.domain')) . ')[/:](?P<path>[\w.-]+/[\w.-]+?)(\.git)?/?$}';
 
         return $this->receivePost($request, $repoUrl, $urlRegex);
     }
