@@ -41,9 +41,13 @@ Include the bundle routing file
 ```
 
 ### Setup a Stash User in Packagist
-You will need to configure a common user in Packagist for your Stash integration.
-Unlike BitBucket and Github, Stash does not provide the information about the user who triggered the hook.
-Once authenticated, you will need the stash user's Api Token for Stash to contact Packagist correctly.
+Because Stash does not supply the information for the user who triggered the hook, you must create a generic Stash user.
+Once this user is created you will need to login and copy the API Token.
+The token and the username are used to authenticate Stash with Packagist.
+If you're configuring a hook for a repository specific to your user you can use your own credentials.
+
+NOTE: For Stash to update Packagist the Stash user will need to be a maintainer on every package from Stash.
+
 
 ### Configure a Post-Receive hook in Stash
 Setup a Post-Receive hook for each repository which is tracked in packagist.
