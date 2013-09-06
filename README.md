@@ -40,3 +40,11 @@ Include the bundle routing file
         resource: "@GiftCardsPackagistBundle/Resources/config/routing.yml"
 ```
 
+### Setup a Stash User in Packagist
+You will need to configure a common user in Packagist for your Stash integration.
+Unlike BitBucket and Github, Stash does not provide the information about the user who triggered the hook.
+Once authenticated, you will need the stash user's Api Token for Stash to contact Packagist correctly.
+
+### Configure a Post-Receive hook in Stash
+Setup a Post-Receive hook for each repository which is tracked in packagist.
+Configure it with a similiar url: http://<packagist domain>/api/stash?username=<stash user>&apiToken=<stash user token>
