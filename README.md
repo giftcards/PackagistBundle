@@ -51,4 +51,4 @@ NOTE: For Stash to update Packagist the Stash user will need to be a maintainer 
 
 ### Configure a Post-Receive hook in Stash
 Setup a Post-Receive hook for each repository which is tracked in packagist.
-Configure it with a similiar url: http://<packagist domain>/api/stash?username=<stash user>&apiToken=<stash user token>
+Configure it with a similiar url: `http://<packagist domain>/api/stash?username=<stash user>&apiToken=<stash user token>`
