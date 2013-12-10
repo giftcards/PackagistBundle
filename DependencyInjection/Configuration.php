@@ -24,7 +24,7 @@ class Configuration implements ConfigurationInterface
                 'ssh',
             ),
         );
-        
+
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('gift_cards_packagist');
 
@@ -32,14 +32,14 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('protocol')
                     ->validate()
-    					->ifNotInArray($validation['protocol'])
-    						->thenInvalid('Invalid protocol %s')
-    					->end()
-					->defaultValue('http')
-					->info('Configures the protocol used to communicate with Stash.')
-					->example('http')
-					->isRequired()
-					->cannotBeEmpty()
+                        ->ifNotInArray($validation['protocol'])
+                            ->thenInvalid('Invalid protocol %s')
+                        ->end()
+                    ->defaultValue('http')
+                    ->info('Configures the protocol used to communicate with Stash.')
+                    ->example('http')
+                    ->isRequired()
+                    ->cannotBeEmpty()
                 ->end()
                 ->scalarNode('domain')
                     ->defaultValue('stash.localhost')
@@ -49,9 +49,9 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                 ->end()
                 ->integerNode('port')
-                	->defaultNull()
-                	->info('Port that stash is configured on.')
-                	->example('8888')
+                    ->defaultNull()
+                    ->info('Port that stash is configured on.')
+                    ->example('8888')
                 ->end()
             ->end()
         ;

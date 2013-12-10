@@ -5,5 +5,5 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class GiftCardsPackagistBundle extends Bundle
 {
-	
+
 }
