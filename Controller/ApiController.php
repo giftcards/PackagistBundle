@@ -41,7 +41,8 @@ class ApiController extends PackagistApiController
             strtolower($payload['repository']['slug'])
         );
 
-        $urlRegex = '{^(?:https?://|ssh://git@|git@)?(?P<host>' . preg_quote($this->container->getParameter('gift_cards_packagist.stash.domain')) . ')[/:](?P<path>[\w.-]+/[\w.-]+?)(\.git)?/?$}';
+        //Add ~ which is used on Atlassian Stash when the repository is created by a private profile
+        $urlRegex = '{^(?:https?:\/\/|ssh:\/\/git@|git@)?(?P<host>' . preg_quote($this->container->getParameter('gift_cards_packagist.stash.domain')) . ')[\/:](?P<path>[\w.-~]+\/[\w.-]+?)(\.git)?\/?$}';
 
         return $this->receivePost($request, $repoUrl, $urlRegex);
     }
